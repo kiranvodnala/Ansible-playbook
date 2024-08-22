@@ -1,0 +1,26 @@
+               sudo nano assgn2.sh -------->> script name
+-------------------------------------------------------------------
+
+echo "this script has been added by custom script > /tmp/1.txt
+
+
+              sudo nano assign2.yaml ------>>> playbook name
+-------------------------------------------------------------------
+---
+- name: task for assign2 on slave1
+  hosts: slave1
+  become: true
+  tasks:
+  - name: running a script on slave1
+    script: assign2.sh
+
+- name: task for assign2 on slave2
+  hosts: slave2
+  become: true
+  tasks:
+  - name: running a script on slave2
+    script: assign2.sh
+
+ansable-playbook assign2.yaml --syntax-check
+ansible-playbook assign2.yaml -check
+ansible-playbook assign2.yaml
