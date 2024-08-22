@@ -1,3 +1,5 @@
+<<<<<<<<<<sudo nano assign.yaml>>>>>>>>>>>>
+
 ---
 - name: inastall java application on slave1
   hosts: slave1
@@ -12,3 +14,11 @@
   tasks: 
   - name: install mysql application on slave2
     apt: name=mysql-server state=latest
+
+
+
+ansible-playbook assign.yaml --syntax-check
+
+ansible-playbook assign.yaml -check
+
+ansible-playbook assign.yaml 
