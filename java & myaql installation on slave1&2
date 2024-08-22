@@ -19,6 +19,6 @@
 
 ansible-playbook assign.yaml --syntax-check
 
-ansible-playbook assign.yaml -check
+ansible-playbook assign.yaml --check
 
 ansible-playbook assign.yaml 
