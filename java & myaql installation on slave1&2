@@ -6,7 +6,7 @@
   - name: install java application on slave1
     apt: name=openjdk-11-jdk state=latest
 
-  - name: inastall mysql application on slave2
+- name: inastall mysql application on slave2
   hosts: slave2
   become: true
   tasks: 
