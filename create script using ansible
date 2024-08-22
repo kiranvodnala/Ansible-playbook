@@ -22,5 +22,5 @@ echo "this script has been added by custom script > /tmp/1.txt
     script: assign2.sh
 
 ansable-playbook assign2.yaml --syntax-check
-ansible-playbook assign2.yaml -check
+ansible-playbook assign2.yaml --check
 ansible-playbook assign2.yaml
