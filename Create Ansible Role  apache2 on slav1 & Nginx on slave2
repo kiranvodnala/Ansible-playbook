@@ -66,3 +66,9 @@ sudo nano assign3.yaml
   roles:
   - nginx
 --------------------------------------------------------------------------------------
+
+Now excute  this code
+
+ansible-playbook assign3.yaml --syntax-check
+ansible-playbook assign3.yaml --check
+ansible-playbook assign .yaml
