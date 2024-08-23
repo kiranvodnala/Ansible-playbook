@@ -1,11 +1,15 @@
 CREATE CUSTOM IMAGE PAGE ON NGINX OR APACHE2
+cd /etc/ansible
+ls
+cd roles
+ls
 cd nginx or cd apache2 
 cd nginx
 ls
 cd files
 ls
 sudo nano index.html
-hi kiran this is custom index.html page
+hi kiran this is custom index.html page -----> create a custom page
 
 save & exit
 pwd
