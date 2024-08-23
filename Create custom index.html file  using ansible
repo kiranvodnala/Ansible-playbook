@@ -1,0 +1,47 @@
+CREATE CUSTOM IMAGE PAGE ON NGINX OR APACHE2
+cd nginx or cd apache2 
+cd nginx
+ls
+cd files
+ls
+sudo nano index.html
+hi kiran this is custom index.html page
+
+save & exit
+pwd
+/etc/ansible/roles/nginx/files ------> copy this path  and past
+cd ..
+ls
+cd tasks
+ls
+sudo nano copy.yml
+---
+- name: copying new custom index.html file
+  copy: src= /etc/ansible/roles/nginx/files/index.html  dest= /var/www/html
+    
+SAVE & EXIT
+
+sudo nano main.yml
+- include_tasks: copy.yml
+
+SAVE & EXIT
+
+NOW GET OUT FROM ROLES
+cd ../../..
+
+<<<<<now create a main role>>>>
+sudo nano assign4.yaml
+---
+- name: custom nginx web page on slave2
+  hosts: slave2
+  become:true
+  roles:
+  - nginx
+
+SAVE & EXIT
+  
+ansible-playbook assign4 --syntax-check 
+ansible-playbook assign4 --check
+ansible-playbook assign4
+  
+
