@@ -44,7 +44,7 @@ showing main.yml
 SAVE and EXIT
 -------------------------------------------------------------------------------------
 sudo nano main.yml
-- include_tasks: install.yaml                                            This part is main.yml file
+- include_tasks: install.yaml                                            This part is nginx main.yml file
 SAVE AND EXIT
 -------------------------------------------------------------------------------------
 NOW GET BACK TO ANSIBLE
