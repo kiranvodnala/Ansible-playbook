@@ -8,3 +8,15 @@ sudo ansible-galaxy init apache2
 sudo ansible-galaxy init nginx
 ls
 cd apache2
+ls
+cd tasks
+ls
+showing main.yml
+
+
+<<<<<<<<create playbook here>>>>>>>>>>>>>.
+sudo nano install.ymal
+---
+- name: install apache2 on slave1
+  become: true
+  apt: name=apache2 state=latest
