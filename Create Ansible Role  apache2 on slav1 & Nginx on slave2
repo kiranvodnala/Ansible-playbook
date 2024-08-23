@@ -23,7 +23,7 @@ sudo nano install.ymal
 SAVE & EXIT
 
 sudo nano main.yml
-- include_tasks: install.ymal
+- include_tasks: install.yaml
 SAVE & EXIT
 
 NOW GO BACK TO ROLES AGAIN
@@ -36,7 +36,7 @@ showing main.yml
 
 
 <<<<<<<<< create playbook file here >>>>>>>>>>>>
-  sudo anao install.ymal
+  sudo anao install.yaml
 ---
 - name: install nginx on slave2
   become: true
@@ -44,5 +44,15 @@ showing main.yml
 SAVE and EXIT
 
 sudo nano main.yml
-- include_tasks: install.ymal
+- include_tasks: install.yaml
 SAVE AND EXIT
+
+NOW GET BACK TO ANSIBLE
+cd ../../..
+
+Now create main role 
+
+sudo nano assign3.yaml
+
+---
+- name: 
