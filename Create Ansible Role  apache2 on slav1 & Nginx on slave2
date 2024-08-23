@@ -1,0 +1,10 @@
+go to inside the ansible directory
+
+cd /etc/ansible
+  ls
+cd roles
+ls
+sudo ansible-galaxy init apache2
+sudo ansible-galaxy init nginx
+ls
+cd apache2
