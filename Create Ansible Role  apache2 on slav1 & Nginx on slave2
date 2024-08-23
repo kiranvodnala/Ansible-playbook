@@ -1,7 +1,7 @@
 go to inside the ansible directory
 
 cd /etc/ansible
-  ls
+ls
 cd roles
 ls
 sudo ansible-galaxy init apache2
@@ -14,9 +14,35 @@ ls
 showing main.yml
 
 
-<<<<<<<<create playbook here>>>>>>>>>>>>>.
+<<<<<<<<create playbook  file here>>>>>>>>>>>>>.
 sudo nano install.ymal
 ---
 - name: install apache2 on slave1
   become: true
   apt: name=apache2 state=latest
+SAVE & EXIT
+
+sudo nano main.yml
+- include_tasks: install.ymal
+SAVE & EXIT
+
+NOW GO BACK TO ROLES AGAIN
+cd ../..
+cd nginx
+ls
+cd tasks
+ls
+showing main.yml
+
+
+<<<<<<<<< create playbook file here >>>>>>>>>>>>
+  sudo anao install.ymal
+---
+- name: install nginx on slave2
+  become: true
+  apt: name=nginx state=latest
+SAVE and EXIT
+
+sudo nano main.yml
+- include_tasks: install.ymal
+SAVE AND EXIT
